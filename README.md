@@ -135,6 +135,28 @@ plt.imshow(pred[:, :, slice_idx], cmap="nipy_spectral"); plt.title("Pred mask - 
 
 ---
 
+## 🖼️ Model Visuals & Outputs
+
+Below are sample visualizations from the **Swin UNETR – BTCV Multi-Organ Segmentation** pipeline.  
+They illustrate the workflow — from raw CT input to predicted masks and 3D reconstructions, plus volumetry previews.
+
+<p align="center">
+  <img src="0" alt="Raw abdominal CT mid-slice" width="48%" />
+  <img src="7" alt="Predicted multi-organ mask overlay" width="48%" />
+</p>
+
+<p align="center">
+  <img src="2" alt="3D mesh rendering of segmented BTCV organs" width="48%" />
+  <img src="6" alt="Per-organ volumetry CSV preview" width="48%" />
+</p>
+
+**Figure notes:**  
+- *Left:* raw CT mid-slice. *Right:* multi-organ mask overlay (Swin UNETR).  
+- *Left:* 3D organ mesh rendering. *Right:* volumetry CSV snapshot (mm³/mL).  
+
+> These figures demonstrate the effectiveness of the pretrained **MONAI Swin UNETR** model, enhanced with Abdulrahman HAMDI’s volumetry and morphometrics modules for quantitative and geometric analysis.
+---
+
 ## ⚙️ TensorRT (optional)
 If you’ve exported a TensorRT engine and prepared `configs/inference_trt.json`, you can combine configs:
 ```bash
